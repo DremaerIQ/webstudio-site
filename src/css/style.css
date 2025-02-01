@@ -1,60 +1,89 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 /* Сброс стилей */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: border-box; /* Устанавливает box-sizing для всех элементов */
+    box-sizing: border-box;
+    /* Устанавливает box-sizing для всех элементов */
 }
 
 /* Основные элементы */
-html, body {
-    font-size: 100%; /* Устанавливает размер шрифта по умолчанию */
-    line-height: 1.5; /* Устанавливает высоту строки */
+html,
+body {
+    font-size: 100%;
+    /* Устанавливает размер шрифта по умолчанию */
+    line-height: 1.5;
+    /* Устанавливает высоту строки */
 }
 
 /* Ссылки */
 a {
-    text-decoration: none; /* Убирает подчеркивание */
-    color: inherit; /* Наследует цвет текста */
+    text-decoration: none;
+    /* Убирает подчеркивание */
+    color: inherit;
+    /* Наследует цвет текста */
 }
 
 /* Заголовки и параграфы */
-h1, h2, h3, h4, h5, h6, p {
-    font-size: inherit; /* Наследует размер шрифта */
-    font-weight: normal; /* Устанавливает нормальный вес шрифта */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-size: inherit;
+    /* Наследует размер шрифта */
+    font-weight: normal;
+    /* Устанавливает нормальный вес шрифта */
 }
 
 /* Списки */
-ul, ol {
-    list-style: none; /* Убирает маркеры списка */
+ul,
+ol {
+    list-style: none;
+    /* Убирает маркеры списка */
 }
 
 /* Изображения и медиа */
 img {
-    max-width: 100%; /* Ограничивает ширину изображений */
-    height: auto; /* Поддерживает пропорции изображений */
+    max-width: 100%;
+    /* Ограничивает ширину изображений */
+    height: auto;
+    /* Поддерживает пропорции изображений */
 }
 
 /* Формы */
-input, textarea, button, select {
-    font-family: inherit; /* Наследует шрифт родителя */
-    font-size: inherit; /* Наследует размер шрифта родителя */
+input,
+textarea,
+button,
+select {
+    font-family: inherit;
+    /* Наследует шрифт родителя */
+    font-size: inherit;
+    /* Наследует размер шрифта родителя */
 }
 
 /* Кнопки */
 button {
-    background: none; /* Убирает фон кнопок */
-    cursor: pointer; /* Изменяет курсор при наведении на кнопку */
+    background: none;
+    /* Убирает фон кнопок */
+    cursor: pointer;
+    /* Изменяет курсор при наведении на кнопку */
 }
 
 /* Базовая подготовка */
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Навигация */
+
+/* Nav start */
 .nav {
     height: 50px;
     line-height: 50px;
@@ -91,7 +120,7 @@ html {
     display: inline-block;
 
     transition: color 0.2s ease-in-out,
-                transform  0.4s ease-in-out;
+        transform 0.4s ease-in-out;
 
     &:not(:last-of-type) {
         margin-right: 15px;
@@ -116,11 +145,12 @@ html {
     transform: translateY(-50%);
 
     &:hover {
-        & > .mobile__line {
+        &>.mobile__line {
             opacity: 0;
         }
 
-        &::before, &::after {
+        &::before,
+        &::after {
             top: 50%;
         }
 
@@ -128,7 +158,7 @@ html {
             top: 50%;
             transform: translateY(-50%) rotate(45deg);
         }
-        
+
         &::after {
             bottom: 50%;
             transform: translateY(-50%) rotate(-45deg);
@@ -136,7 +166,7 @@ html {
     }
 
 
-    & > .mobile__line,
+    &>.mobile__line,
     &::before,
     &::after {
         width: 100%;
@@ -147,12 +177,12 @@ html {
         position: absolute;
 
         transition: opacity 0.2s ease,
-                    top 0.2s ease,
-                    bottom 0.2s ease,
-                    transform  0.2s ease;
+            top 0.2s ease,
+            bottom 0.2s ease,
+            transform 0.2s ease;
     }
 
-    & > .mobile__line {
+    &>.mobile__line {
         top: 50%;
         transform: translateY(-50%);
     }
@@ -167,6 +197,120 @@ html {
         bottom: 0;
     }
 }
+
+/* Nav end */
+
+
+/* Header start */
+.header {
+    width: 100%;
+    height: calc(100dvh - 50px);
+    overflow: hidden;
+
+    /* margin-top: 50px; */
+    position: relative;
+
+    &>.header__content {
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    & .header__info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+    }
+
+    & .header__title {
+        font-size: 100px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+        text-shadow: 0 0 5px black, 5px 7px 2px #e06161;
+        margin-bottom: 50px;
+    }
+
+    & .header__btn {
+        display: inline-block;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 5px 7px 2px #e06161;
+        border-radius: 50px;
+        font-weight: 700;
+
+        transition: scale 0.2s ease;
+
+        &:hover {
+            scale: 1.1;
+        }
+    }
+
+    &>.header__background {
+        width: 100%;
+        height: 100%;
+
+        background-image: linear-gradient(#dd8580, #ffc997);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &>img {
+            position: absolute;
+        }
+
+        &>.circle-bordered {
+            bottom: 0;
+            left: 10%;
+            transform: translateY(20%);
+        }
+
+        &>.circle-dashed-border {
+            bottom: 0;
+            right: 0;
+            transform: translate(20%, 35%);
+        }
+        
+        &>.circle1 {
+            top: 0;
+            left: 0;
+            transform: translate(-10%,-50%);
+            z-index: 2;
+        }
+
+        &>.circle2 {
+            top: 0;
+            right: 0;
+            transform: translateY(-45%);
+        }
+
+        &>.circle3 {
+            bottom: 0;
+            left: 0;
+            transform: translate(-10%, 5%);
+        }
+
+        &>.octagon {
+            top: 65%;
+            left: 50%;
+            transform: translateY(10%);
+        }
+
+        &>.triangle {
+            top: 10%;
+            left: 40%;
+        }
+
+    }
+}
+
+/* Header end */
 
 @media screen and (max-width: 800px) {
     .nav__btns {
