@@ -359,6 +359,48 @@ html {
 }
 /* Doing end */
 
+/* Services start */
+.services {
+    background-image: linear-gradient(-7deg, white 20%, rgb(224 136 129) 20%, rgb(255 201 151) 70%);
+}
+
+.services__items {
+    margin-inline: auto;
+}
+
+.item.services__item {
+    display: inline-block;
+    background-color: white;
+    width: 30%;
+    min-height: 400px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 30px;
+    border: 5px solid rgb(255, 181, 111);
+    vertical-align: top;
+
+    &:not(:last-of-type) {
+        margin-right: 20px;
+    }
+
+    & > h3 {
+        font-weight: 900;
+    }
+
+    & > img {
+        max-width: 60%;
+    }
+
+    & > hr {
+        background-color: #e06161;
+        height: 2px;
+        max-width: 50%;
+        margin: 10px auto;
+        border: none;
+    }
+}
+/* Services end */
+
 /* Media start */
 @media screen and (max-width: 800px) {
     .nav__btns {
