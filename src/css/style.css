@@ -82,6 +82,26 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
+.container {
+    max-width: 1200px;
+    padding-inline: 15px;
+    padding-block: 100px;
+    margin-inline: auto;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+
+    &.white {
+        color: white;
+    }
+}
+
+.section-text {}
+
 
 /* Nav start */
 .nav {
@@ -309,9 +329,13 @@ html {
 
     }
 }
-
 /* Header end */
 
+/* About start */
+.about {}
+/* About end */
+
+/* Media start */
 @media screen and (max-width: 800px) {
     .nav__btns {
         display: none;
@@ -321,3 +345,5 @@ html {
         display: block;
     }
 }
+
+/* Media end */
