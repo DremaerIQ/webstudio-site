@@ -296,11 +296,11 @@ html {
             right: 0;
             transform: translate(20%, 35%);
         }
-        
+
         &>.circle1 {
             top: 0;
             left: 0;
-            transform: translate(-10%,-50%);
+            transform: translate(-10%, -50%);
             z-index: 2;
         }
 
@@ -329,10 +329,12 @@ html {
 
     }
 }
+
 /* Header end */
 
 /* About start */
 .about {}
+
 /* About end */
 
 /* Doing start */
@@ -340,23 +342,25 @@ html {
     background-image: linear-gradient(7deg, rgb(255 201 151) 20%, rgb(224 136 129) 70%, white 70%);
 }
 
-.doing__info, .doing__image{
+.doing__info,
+.doing__image {
     display: inline-block;
     width: 49%;
     vertical-align: top;
 }
 
-.doing__text{
+.doing__text {
     background-color: white;
     padding: 15px;
     border-radius: 25px;
     box-shadow: 5px 7px 2px #e06161;
 }
 
-.doing__image-src{
+.doing__image-src {
     width: 400px;
     float: right;
 }
+
 /* Doing end */
 
 /* Services start */
@@ -383,15 +387,15 @@ html {
         margin-right: 20px;
     }
 
-    & > h3 {
+    &>h3 {
         font-weight: 900;
     }
 
-    & > img {
+    &>img {
         max-width: 60%;
     }
 
-    & > hr {
+    &>hr {
         background-color: #e06161;
         height: 2px;
         max-width: 50%;
@@ -400,6 +404,59 @@ html {
     }
 }
 /* Services end */
+
+/* Advantages start */
+.advantages {
+    position: relative;
+    overflow: hidden;
+}
+
+.advantages__content {
+    position: relative;
+    z-index: 2;
+}
+
+.item.advantages__item {
+    background-color: white;
+    border: 5px solid rgb(255, 181, 111);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: #e06161 5px 7px 2px;
+    margin-bottom: 30px;
+    width: 65%;
+
+    &:nth-of-type(even) {
+        margin-left: auto;
+    }
+
+
+    &>h3 {
+        font-weight: 700;
+    }
+
+    &>.item__info {
+        list-style-type: circle;
+        padding-inline: 20px;
+    }
+}
+
+.advantages__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.advantages__background-circle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
+
+/* Advantages end */
 
 /* Media start */
 @media screen and (max-width: 800px) {
