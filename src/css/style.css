@@ -80,6 +80,7 @@ button {
 /* Базовая подготовка */
 html {
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -99,9 +100,6 @@ html {
         color: white;
     }
 }
-
-.section-text {}
-
 
 /* Nav start */
 .nav {
