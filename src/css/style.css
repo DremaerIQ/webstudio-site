@@ -284,18 +284,21 @@ html {
         }
 
         &>.circle-bordered {
+            width: clamp(60px, 10dvw, 186px);
             bottom: 0;
             left: 10%;
             transform: translateY(20%);
         }
 
         &>.circle-dashed-border {
+            width: clamp(100px, 25dvw, 550px);
             bottom: 0;
             right: 0;
             transform: translate(20%, 35%);
         }
 
         &>.circle1 {
+            width: clamp(120px, 18dvw, 388px);
             top: 0;
             left: 0;
             transform: translate(-10%, -50%);
@@ -303,24 +306,28 @@ html {
         }
 
         &>.circle2 {
+            width: clamp(120px, 18dvw, 388px);
             top: 0;
             right: 0;
             transform: translateY(-45%);
         }
 
         &>.circle3 {
+            width: clamp(200px, 30dvw, 629px);
             bottom: 0;
             left: 0;
             transform: translate(-10%, 5%);
         }
 
         &>.octagon {
+            width: clamp(50px, 10dvw, 200px);
             top: 65%;
             left: 50%;
             transform: translateY(10%);
         }
 
         &>.triangle {
+            width: clamp(40px, 10dvw, 167px);
             top: 10%;
             left: 40%;
         }
