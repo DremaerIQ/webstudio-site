@@ -285,9 +285,10 @@ html {
 
         &>.circle-bordered {
             width: clamp(60px, 10dvw, 186px);
-            bottom: 0;
+            bottom: -3%;
             left: 10%;
-            transform: translateY(20%);
+
+            animation: move-right 15s linear 0s infinite both;
         }
 
         &>.circle-dashed-border {
@@ -295,6 +296,8 @@ html {
             bottom: 0;
             right: 0;
             transform: translate(20%, 35%);
+
+            animation: rotation 10s linear 0s infinite;
         }
 
         &>.circle1 {
@@ -303,20 +306,24 @@ html {
             left: 0;
             transform: translate(-10%, -50%);
             z-index: 2;
+
+            animation: move-rotation 10s linear 0s infinite normal;
         }
 
         &>.circle2 {
             width: clamp(120px, 18dvw, 388px);
-            top: 0;
+            top: -8%;
             right: 0;
-            transform: translateY(-45%);
+
+            animation: move-down-left 10s linear 0s infinite both;
         }
 
         &>.circle3 {
             width: clamp(200px, 30dvw, 629px);
-            bottom: 0;
-            left: 0;
-            transform: translate(-10%, 5%);
+            bottom: -1%;
+            left: -2%;
+
+            animation: move-up-left 8s linear 0s infinite both;
         }
 
         &>.octagon {
@@ -324,12 +331,16 @@ html {
             top: 65%;
             left: 50%;
             transform: translateY(10%);
+
+            animation: move-rotation 10s linear 0s infinite alternate-reverse;
         }
 
         &>.triangle {
             width: clamp(40px, 10dvw, 167px);
             top: 10%;
             left: 40%;
+
+            animation: move-right 25s linear 0s infinite normal;
         }
 
     }
@@ -337,10 +348,12 @@ html {
 
 /* Header end */
 
+
 /* About start */
 .about {}
 
 /* About end */
+
 
 /* Doing start */
 .doing {
@@ -367,6 +380,7 @@ html {
 }
 
 /* Doing end */
+
 
 /* Services start */
 .services {
@@ -410,6 +424,7 @@ html {
 }
 
 /* Services end */
+
 
 /* Advantages start */
 .advantages {
@@ -464,6 +479,7 @@ html {
 
 /* Advantages end */
 
+
 /* Works start */
 .works__main {
 
@@ -491,6 +507,7 @@ html {
 }
 
 /* Works end */
+
 
 /* Footer start */
 .footer {
@@ -522,6 +539,71 @@ html {
 
 /* Footer end */
 
+
+/* Keyframes start */
+@keyframes move-up-left {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(40px, 80px);
+    }
+}
+
+@keyframes move-down-left {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-180px, 200px) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(359deg);
+    }
+}
+
+@keyframes move-right {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(230%, 0);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes move-rotation {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(80px, 200px) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(359deg);
+    }
+}
+
+/* Keyframes end */
+
+
 /* Media start */
 @media screen and (max-width: 800px) {
     .nav__btns {
@@ -542,13 +624,16 @@ html {
 }
 
 @media screen and (max-width: 600px) {
-    .item.services__item, .item.advantages__item  {
+
+    .item.services__item,
+    .item.advantages__item {
         display: block;
         width: fit-content;
         margin: 0 auto 30px !important;
     }
 
-    .doing__info, .doing__image {
+    .doing__info,
+    .doing__image {
         width: 100%;
     }
 
